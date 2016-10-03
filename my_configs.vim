@@ -24,3 +24,6 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
+
+" Set correct path for exuberant ctags
+let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
