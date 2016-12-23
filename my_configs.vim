@@ -25,12 +25,12 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set softtabstop=2 |
     \ set shiftwidth=2
 
-" Set correct path for exuberant ctags
-let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
-
 " Add F5 binding for deleting trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Automatically open SCons files with Python syntax highlighting
 autocmd BufReadPre SConstruct set filetype=python
 autocmd BufReadPre SConscript set filetype=python
+
+" Set correct path for exuberant ctags
+let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
