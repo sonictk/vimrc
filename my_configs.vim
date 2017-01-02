@@ -27,7 +27,3 @@ au BufNewFile,BufRead *.js, *.html, *.css
 
 " Add F5 binding for deleting trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
-
-" Adding bindings for horizontal scrolling
-map <C-L> 20zl " Scroll 20 characters to the right
-map <C-H> 20zh " Scroll 20 characters to the left
