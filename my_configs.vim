@@ -25,12 +25,8 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set softtabstop=2 |
     \ set shiftwidth=2
 
-" Set correct path for exuberant ctags
-let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
-
 " Add F5 binding for deleting trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
-" Adding bindings for horizontal scrolling
-map <C-L> 20zl " Scroll 20 characters to the right
-map <C-H> 20zh " Scroll 20 characters to the left
+" Set correct path for exuberant ctags
+let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
