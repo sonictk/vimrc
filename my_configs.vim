@@ -27,3 +27,7 @@ au BufNewFile,BufRead *.js, *.html, *.css
 
 " Add F5 binding for deleting trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+" Automatically open SCons files with Python syntax highlighting
+autocmd BufReadPre SConstruct set filetype=python
+autocmd BufReadPre SConscript set filetype=python
