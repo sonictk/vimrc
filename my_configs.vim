@@ -11,7 +11,7 @@ set foldmethod=indent
 set foldlevel=99
 
 " Adds proper PEP-8 settings for Python files
-au BufNewFile,BufRead *.py
+au BufNewFile,BufRead *.py, *.js, *.html, *.css
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -20,10 +20,25 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css
+" Settings for Markdown-formatted files
+au BufNewFile,BufRead *.md
     \ set tabstop=2 |
     \ set softtabstop=2 |
-    \ set shiftwidth=2
+    \ set shiftwidth=2 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" Settings for C/C++ files
+au BufNewFile,BufRead *.c, *.cpp, *.h, *.hpp
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=120 |
+    \ set noexpandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 
 " Add F5 binding for deleting trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
