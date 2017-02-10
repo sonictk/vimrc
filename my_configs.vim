@@ -46,3 +46,6 @@ autocmd BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp
 " Automatically open SCons files with Python syntax highlighting
 autocmd BufReadPre SConstruct set filetype=python
 autocmd BufReadPre SConscript set filetype=python
+
+" Automatically refresh syntax highlighting
+autocmd BufEnter,InsertLeave * :syntax sync fromstart
