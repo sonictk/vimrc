@@ -47,8 +47,5 @@ autocmd BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp
 autocmd BufReadPre SConstruct set filetype=python
 autocmd BufReadPre SConscript set filetype=python
 
-" Automatically refresh syntax highlighting
-autocmd BufEnter,InsertLeave * :syntax sync fromstart
-
 " Set correct path for exuberant ctags
 let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
