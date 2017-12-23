@@ -47,3 +47,8 @@ autocmd BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp
 autocmd BufReadPre SConstruct set filetype=python
 autocmd BufReadPre SConscript set filetype=python
 
+" Disable sounds 
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
